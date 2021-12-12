@@ -1,4 +1,4 @@
-import { publish } from "gh-pages";
+var ghpages = require("gh-pages");
 
 publish(
 	"public", // path to public directory
