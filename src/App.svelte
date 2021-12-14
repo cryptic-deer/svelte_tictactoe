@@ -28,15 +28,15 @@
 		usersTurn = false;
 
 		if (arr.length != 9) {
-		  pcMove();
+		  computerMove();
 		}
 		if (arr.length == 9 && !message) {
-		  message = "A tie!";
+		  message = "Draw!";
 		}
 	  }
 	};
 
-	const pcMove = () => {
+	const computerMove = () => {
 	  if (!message) {
 		setTimeout(() => {
 		  let num;
@@ -125,10 +125,11 @@
 	  padding: 1em;
 	  max-width: 100%;
 	  margin: 0 auto;
+	  height: 100%;
 	}
 	.wrapper {
 	  max-width: 400px;
-	  min-height: 400px;
+	  height: 400px;
 	  margin: 0 auto;
 	  display: grid;
 	  grid-template-columns: repeat(3, 1fr);
@@ -141,10 +142,23 @@
 	  font-size: 5rem;
 	}
 	.reset {
-	  margin-top: 5vh;
-	  font-size: 26px;
+	  margin-top: 10vh;
+	  font-size: 2.5rem;
 	  cursor: pointer;
 	}
+	@media only screen and (max-width: 450px){
+		.title{
+			font-size: 3rem;
+		}
+		.wrapper{
+			max-height: 350px;
+			max-width: 350px;
+		}
+		.reset{
+			margin-top: 12vh;
+			font-size: 2rem;
+		}
+	} 
   </style>
   
 <svelte:head>

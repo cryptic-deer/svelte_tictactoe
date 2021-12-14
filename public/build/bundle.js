@@ -402,11 +402,11 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			p = element("p");
-    			attr_dev(p, "class", "svelte-1tufejg");
-    			add_location(p, file$1, 27, 4, 550);
-    			attr_dev(div, "class", "board svelte-1tufejg");
+    			attr_dev(p, "class", "svelte-1eew8bp");
+    			add_location(p, file$1, 32, 4, 648);
+    			attr_dev(div, "class", "board svelte-1eew8bp");
     			attr_dev(div, "number", /*number*/ ctx[1]);
-    			add_location(div, file$1, 26, 2, 498);
+    			add_location(div, file$1, 31, 2, 596);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -539,7 +539,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (157:3) {#each Array(9) as _field, index}
+    // (171:3) {#each Array(9) as _field, index}
     function create_each_block(ctx) {
     	let board;
     	let current;
@@ -579,7 +579,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(157:3) {#each Array(9) as _field, index}",
+    		source: "(171:3) {#each Array(9) as _field, index}",
     		ctx
     	});
 
@@ -631,14 +631,14 @@ var app = (function () {
     			t3 = space();
     			h11 = element("h1");
     			t4 = text(t4_value);
-    			attr_dev(h10, "class", "title svelte-17gk37i");
-    			add_location(h10, file, 154, 1, 3055);
-    			attr_dev(div, "class", "wrapper svelte-17gk37i");
-    			add_location(div, file, 155, 1, 3116);
-    			attr_dev(h11, "class", "reset svelte-17gk37i");
-    			add_location(h11, file, 160, 1, 3241);
-    			attr_dev(main, "class", "svelte-17gk37i");
-    			add_location(main, file, 153, 2, 3047);
+    			attr_dev(h10, "class", "title svelte-1y8vq9a");
+    			add_location(h10, file, 168, 1, 3278);
+    			attr_dev(div, "class", "wrapper svelte-1y8vq9a");
+    			add_location(div, file, 169, 1, 3339);
+    			attr_dev(h11, "class", "reset svelte-1y8vq9a");
+    			add_location(h11, file, 174, 1, 3464);
+    			attr_dev(main, "class", "svelte-1y8vq9a");
+    			add_location(main, file, 167, 2, 3270);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -769,16 +769,16 @@ var app = (function () {
     			usersTurn = false;
 
     			if (arr.length != 9) {
-    				pcMove();
+    				computerMove();
     			}
 
     			if (arr.length == 9 && !message) {
-    				$$invalidate(0, message = "A tie!");
+    				$$invalidate(0, message = "Draw!");
     			}
     		}
     	};
 
-    	const pcMove = () => {
+    	const computerMove = () => {
     		if (!message) {
     			setTimeout(
     				() => {
@@ -869,7 +869,7 @@ var app = (function () {
     		usersTurn,
     		message,
     		userMove,
-    		pcMove,
+    		computerMove,
     		winner,
     		reset
     	});

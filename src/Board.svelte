@@ -22,6 +22,11 @@
       font-size: 4.5rem;
       font-weight: bold;
     }
+    @media only screen and (max-width: 350px){
+	    .board p{
+			  font-size: 2.5rem;
+		  }
+	  } 
   </style>
   
   <div class="board" on:click={onClick} {number}>
