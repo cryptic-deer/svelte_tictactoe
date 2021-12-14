@@ -78,13 +78,13 @@
 	  }
 	};
 
-	const winner = (perc) => {
+	const winner = (p) => {
 	  if (arr.length >= 5) {
-		let arr2 = arr.filter((_val, i) => i % 2 == perc);
+		let arr2 = arr.filter((_val, i) => i % 2 == p);
 
 		winningCombo.forEach((array) => {
 		  if (array.every((element) => arr2.includes(element))) {
-			if (perc == 0) {
+			if (p == 0) {
 			  message = "You won!";
 			  const game = document.querySelector(".wrapper");
 
