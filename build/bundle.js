@@ -632,13 +632,13 @@ var app = (function () {
     			h11 = element("h1");
     			t4 = text(t4_value);
     			attr_dev(h10, "class", "title svelte-1y8vq9a");
-    			add_location(h10, file, 168, 1, 3278);
+    			add_location(h10, file, 168, 1, 3269);
     			attr_dev(div, "class", "wrapper svelte-1y8vq9a");
-    			add_location(div, file, 169, 1, 3339);
+    			add_location(div, file, 169, 1, 3330);
     			attr_dev(h11, "class", "reset svelte-1y8vq9a");
-    			add_location(h11, file, 174, 1, 3464);
+    			add_location(h11, file, 174, 1, 3455);
     			attr_dev(main, "class", "svelte-1y8vq9a");
-    			add_location(main, file, 167, 2, 3270);
+    			add_location(main, file, 167, 2, 3261);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -817,13 +817,13 @@ var app = (function () {
     		}
     	};
 
-    	const winner = perc => {
+    	const winner = p => {
     		if (arr.length >= 5) {
-    			let arr2 = arr.filter((_val, i) => i % 2 == perc);
+    			let arr2 = arr.filter((_val, i) => i % 2 == p);
 
     			winningCombo.forEach(array => {
     				if (array.every(element => arr2.includes(element))) {
-    					if (perc == 0) {
+    					if (p == 0) {
     						$$invalidate(0, message = "You won!");
     						const game = document.querySelector(".wrapper");
 
